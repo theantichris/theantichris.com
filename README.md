@@ -1,2 +1,3 @@
 # theantichris.com
-My public website
+
+I'm a developer in Knoxville, TN.
