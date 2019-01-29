@@ -1,6 +1,6 @@
 # theantichris.com
 
-I'm a developer in Knoxville, TN.
+I'm a developer in Knoxville, TN. I work at KXVL Software.
 
 [GitHub](https://github.com/theantichris)
 
