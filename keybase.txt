@@ -1,1 +1,56 @@
-[ my public key: https://keybase.io/theantichris; my proof: https://keybase.io/theantichris/sigs/mtVC8xwQY_FPgSO4rJmCNSqW0vIkEzoUCrl9hiKb3mU ]
+==================================================================
+https://keybase.io/theantichris
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://theantichris.com
+  * I am theantichris (https://keybase.io/theantichris) on keybase.
+  * I have a public key ASCjHmsM8zSRp_myhZs25DO_bUChWMTm7HBLyLaUqwk0FAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a31e6b0cf33491a7f9b2859b36e433bf6d40a158c4e6ec704bc8b694ab0934140a",
+      "host": "keybase.io",
+      "kid": "0120a31e6b0cf33491a7f9b2859b36e433bf6d40a158c4e6ec704bc8b694ab0934140a",
+      "uid": "5550dcb0786fea74fa953ba95e85cd19",
+      "username": "theantichris"
+    },
+    "merkle_root": {
+      "ctime": 1555527935,
+      "hash": "00295a9f292f39b0e28f72c7d8a9030e6b08021e67baef02892286bb841cc3d6342d8a85057160df7641d7168d0f07c7bfff6457a95df55cfd11ae83e2fbc9e3",
+      "hash_meta": "c04eafaf98857767a4a2d190451e05306f3d4c0e504d2b5df4aa8fc08215f04c",
+      "seqno": 5193719
+    },
+    "service": {
+      "entropy": "DhXpvp5kjGPPfIgH2BBPonRY",
+      "hostname": "theantichris.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555527946,
+  "expire_in": 504576000,
+  "prev": "ef83f17f7ed36216068d0a69668b70258fd4a2507a99b689afedf73b0414cc7a",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgox5rDPM0kaf5soWbNuQzv21AoVjE5uxwS8i2lKsJNBQKp3BheWxvYWTESpcCCMQg74Pxf37TYhYGjQppZotwJY/UolB6mbaJr+33OwQUzHrEIHIrYDNy2Zsw0whSvRiwhRAtW8L7nASkTOwxUD8nb6H+AgHCo3NpZ8RAfoWSZnMO/URR3zsVplDBORLGHIV+NHvMJ1zlhKm4NKv2Yk10VrA8TpdX0GE+wM+rWI8PX+M7H2H+BqAjKjbCDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO82nG/LyBhRVf7P9vkJq8oLDqVVIeuY7m/tmY4Hcltdo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/theantichris
+
+==================================================================
