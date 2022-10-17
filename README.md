@@ -1,6 +1,5 @@
 # Hi there, I'm Christopher 👋
 
-I'm a the Director of Software Engineering at [The Art of Education University](https://theartofeducation.edu/).
 I have ~20 years of experience creating large SaaS and internal products for
 various industries.
 
