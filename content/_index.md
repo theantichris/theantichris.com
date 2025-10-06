@@ -2,6 +2,20 @@
 date = '2025-10-06T08:11:00-04:00'
 draft = false
 title = '~'
+keywords = [
+  "Christopher Lamm",
+  "software engineering leader",
+  "machine learning manager",
+  "AI strategy",
+  "tech leadership",
+  "ML systems",
+  "engineering management",
+  "CompanyCam",
+  "senior engineering manager",
+  "technical leadership",
+  "AI development",
+  "machine learning operations"
+]
 +++
 
 <div class="terminal-prompt">/theantichris.com/~</div>
