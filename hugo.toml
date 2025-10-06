@@ -1,4 +1,4 @@
-baseURL = 'https://theantichris.github.io/theantichris.com/'
+baseURL = 'https://theantichris.com/'
 languageCode = 'en-us'
 title = 'theantichris.com | christopher lamm'
 theme = 'terminal'
