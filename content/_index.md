@@ -26,10 +26,10 @@ I combine technical depth with human centered leadership. I'm passionate about b
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat highlights.md
 
-- Led high impact software engineering and machine learning teams scross full product lifecycles
+- Led high impact software engineering and machine learning teams across full product lifecycles
 - Designed and delivered complex, scalable systems in production
 - Integrated ML features into software products with reliability
-- Folstered engineering culture around ownership, metrics, and excellence
+- Fostered engineering culture around ownership, metrics, and excellence
 
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat cta.md
