@@ -5,3 +5,7 @@ theme = 'terminal'
 
 [params]
  customCSS = ["css/custom.css"]
+
+[params.logo]
+ 
+logoText = 'christopher lamm'
