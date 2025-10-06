@@ -1,3 +1,4 @@
 baseURL = 'https://theantichris.com/'
 languageCode = 'en-us'
 title = 'theantichris.com | Christopher Lamm'
+theme = 'terminal'
