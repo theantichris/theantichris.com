@@ -22,6 +22,7 @@ keywords = [
 <div class="prompt-symbol">>>> </div>whoami
 
 Christopher Lamm - Software Engineering + Machine Learning Leader
+<img src="/img/headshot.png" alt="Christopher Lamm" class="profile-image">
 
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat focus_areas.md

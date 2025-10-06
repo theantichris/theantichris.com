@@ -19,6 +19,12 @@ a {
   color: #e5e510;
 }
 
+.profile-image {
+  max-width: 150px;
+  width: 150px;
+  height: auto;
+}
+
 .terminal-prompt {
   color: #bc3fbc !important;
   font-weight: normal;
