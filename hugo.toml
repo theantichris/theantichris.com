@@ -1,4 +1,7 @@
 baseURL = 'https://theantichris.com/'
 languageCode = 'en-us'
-title = 'theantichris.com | Christopher Lamm'
+title = 'theantichris.com | christopher lamm'
 theme = 'terminal'
+
+[params]
+ customCSS = ["css/custom.css"]
