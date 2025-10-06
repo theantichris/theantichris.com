@@ -12,5 +12,23 @@ body {
 }
 
 a {
-  color: var(--accent)
+  color: #e5e510;
+}
+
+.terminal-prompt {
+  color: #bc3fbc !important;
+  font-weight: normal;
+  margin: 0 0 0 0;
+  display: inline-block;
+}
+
+.prompt-symbol {
+  color: #16e6c9;
+  font-weight: bold;
+  display: inline;
+  margin-left: 0;
+}
+
+.index-content p:has(.terminal-prompt) {
+  margin: 0;
 }

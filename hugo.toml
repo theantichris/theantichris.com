@@ -5,3 +5,9 @@ theme = 'terminal'
 
 [params]
  customCSS = ["css/custom.css"]
+
+[params.logo]
+logoText = 'theantichris.com'
+
+[markup.goldmark.renderer]
+unsafe = true
