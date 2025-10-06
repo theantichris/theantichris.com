@@ -39,6 +39,10 @@ a {
   margin-left: 0;
 }
 
+.prompt-symbol::after {
+  content: " ";
+}
+
 .index-content p:has(.terminal-prompt) {
   margin: 0;
 }
