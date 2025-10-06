@@ -6,7 +6,7 @@ title = '~'
 
 I have over 20 years of experience creating large Saas and internal products for various industries like event management, logistics, fintech, edtech, and construction.
 
-- I'm always down to chat about the finger points of software development and team building
+- I'm always down to chat about the finer points of software development and team building
 - I love riding my motorcycle
 - Reach me at christopherlamm81@icloud.com
 - Pronouns: he/him/they/them
