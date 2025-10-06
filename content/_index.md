@@ -50,4 +50,4 @@ I combine technical depth with human centered leadership. I'm passionate about b
 <div class="prompt-symbol">>>> </div>cat cta.md
 
 - Explore my work -> Portfolio & Projects
-- Connect -> LinkedIn, GitHub, Mastodon, or send me a message
+- Connect -> <a title="My LinkedIn profile" href="https://www.linkedin.com/in/theantichris/">LinkedIn</a>, <a title="My GitHub profile" href="https://github.com/theantichris">GitHub</a>, <a title="My Mastodon profile" href="https://mastodon.social/@the_anti_chris">Mastodon</a>, or <a title="send me a message at christopherlamm81@icloud.com" href="mailto:christopherlamm81@icloud.com">send me a message</a>

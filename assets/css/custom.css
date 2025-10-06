@@ -39,6 +39,10 @@ a {
   margin-left: 0;
 }
 
+.prompt-symbol::before {
+  content: " ";
+}
+
 .prompt-symbol::after {
   content: " ";
 }
