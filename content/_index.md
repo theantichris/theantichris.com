@@ -4,12 +4,12 @@ draft = false
 title = '~'
 +++
 
-<div class="teminal-prompt">~/Code/theantichris.com</div>
+<div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>whoami
 
 Christopher Lamm - Software Engineering & Machine Learning Leader
 
-<div class="teminal-prompt">~/Code/theantichris.com</div>
+<div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat focus_areas.md
 
 | Domain                            | Role                                 | Impact                                                   |
@@ -18,12 +18,12 @@ Christopher Lamm - Software Engineering & Machine Learning Leader
 | Software Architecture & Delivery  | Planning, execution, iteration       | Reliable, scalable products built on strong foundations     |
 | ML Integration & Innovation        | Bridging research & production       | Intelligent features that drive value, integrated into product |
 
-<div class="teminal-prompt">~/Code/theantichris.com</div>
+<div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat about_me.md
 
 I combine technical depth with human centered leadership. I'm passionate abut building engineering organizations that deliver measurable outcomes while upholding craftsmanship, clarity, and continuous growth.
 
-<div class="teminal-prompt">~/Code/theantichris.com</div>
+<div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat highlights.md
 
 - Led high impact software engineering and machine learning teams scross full product lifecycles
@@ -31,8 +31,9 @@ I combine technical depth with human centered leadership. I'm passionate abut bu
 - Integrated ML features into software products with reliability
 - Folstered engineering culture around ownership, metrics, and excellence
 
-<div class="teminal-prompt">~/Code/theantichris.com</div>
+<div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat cta.md
 
 Explore my work -> Portfolio & Projects
+
 Connect -> LinkedIn, GitHub, Mastodon, or send me a message

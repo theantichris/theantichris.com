@@ -16,7 +16,7 @@ a {
 }
 
 .terminal-prompt {
-  color: #bc3fbc;
+  color: #bc3fbc !important;
   font-weight: normal;
   margin: 25px 0 0 0;
   display: inline-block;
@@ -29,6 +29,6 @@ a {
   margin-left: 0;
 }
 
-index-content p:has(.terminal-prompt) {
+.index-content p:has(.terminal-prompt) {
   margin: 0;
 }
