@@ -21,7 +21,7 @@ Christopher Lamm - Software Engineering & Machine Learning Leader
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat about_me.md
 
-I combine technical depth with human centered leadership. I'm passionate abut building engineering organizations that deliver measurable outcomes while upholding craftsmanship, clarity, and continuous growth.
+I combine technical depth with human centered leadership. I'm passionate about building engineering organizations that deliver measurable outcomes while upholding craftsmanship, clarity, and continuous growth.
 
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat highlights.md
