@@ -34,6 +34,5 @@ I combine technical depth with human centered leadership. I'm passionate abut bu
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat cta.md
 
-Explore my work -> Portfolio & Projects
-
-Connect -> LinkedIn, GitHub, Mastodon, or send me a message
+- Explore my work -> Portfolio & Projects
+- Connect -> LinkedIn, GitHub, Mastodon, or send me a message
