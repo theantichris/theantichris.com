@@ -186,3 +186,28 @@ a {
 .stat.license {
   color: #bc3fbc;
 }
+
+/* Table styling */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px dashed var(--accent) !important;
+}
+
+table th,
+table td {
+  border: 1px dashed var(--accent);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+table th {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+table td {
+  color: var(--color)
+}
