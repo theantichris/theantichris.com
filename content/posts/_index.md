@@ -5,4 +5,4 @@ draft = false
 +++
 
 <div class="terminal-prompt">/theantichris.com/~/blog</div>
-<div class="prompt-symbol">>>> </div>ls posts
+<div class="prompt-symbol">>>> </div>ls
