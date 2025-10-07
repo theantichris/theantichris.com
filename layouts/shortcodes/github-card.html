@@ -5,13 +5,15 @@
 {{ $data := $resource | transform.Unmarshal }}
 
 <div class="github-card">
-  <div class="card-header">
-    <span class="repo-icon">📦</span>
+  <div class=card-body>
+    <div class="card-header">
+      <span class="repo-icon">📦</span>
 
-    <a title="{{ $data.name }}" href="{{ $data.html_url }}" class="repo-name">{{ $data.name }}</a>
+      <a title="{{ $data.name }}" href="{{ $data.html_url }}" class="repo-name">{{ $data.name }}</a>
+    </div>
+
+    <p class="repo-description">{{ $data.description }}</p>
   </div>
-
-  <p class="repo-description">{{ $data.description }}</p>
 
   <div class="card-footer">
     <div class="repo-stats">
