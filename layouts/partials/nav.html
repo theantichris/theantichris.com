@@ -1,5 +1,5 @@
 <div class="nav">
-  <div class="terminal-prompt">/theantichris.com/~</div>
+  <div class="terminal-prompt">/theantichris.com/~{{ if not .IsHome }}{{ .RelPermalink | strings.TrimSuffix "/" }}{{ end }}</div>
   <div class="prompt-symbol">>>> </div>ls ~
 
   <div>
