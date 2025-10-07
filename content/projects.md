@@ -16,6 +16,13 @@ keywords = [
 <div class="terminal-prompt">/theantichris.com/~/projects</div>
 <div class="prompt-symbol">>>> </div>ls
 
+<div class="github-cards-grid">
+  {{< github-card user="theantichris" repo="dotfiles" >}}
+  {{< github-card user="theantichris" repo="ghost" >}}
+  {{< github-card user="theantichris" repo="granola" >}}
+  {{< github-card user="theantichris" repo="tavily-go" >}}
+</div>
+
 [ghost](#ghost)    [granola](#granola)    [dotfiles](#dotfiles)    [tavily-go](#tavily-go)
 
 <div class="terminal-prompt">/theantichris.com/~/projects</div>
