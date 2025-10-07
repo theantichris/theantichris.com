@@ -209,5 +209,5 @@ table th {
 }
 
 table td {
-  color: var(--color)
+  color: var(--color);
 }
