@@ -1,7 +1,7 @@
 +++
 date = '2025-10-06T08:11:00-04:00'
 draft = false
-title = 'resume'
+title = '~/resume'
 description = 'Christopher Lamm - Resume | Senior Engineering Manager with 20+ years of experience leading high-performing teams and delivering scalable solutions'
 keywords = [
   "Christopher Lamm resume",
