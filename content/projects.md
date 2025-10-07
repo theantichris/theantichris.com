@@ -25,4 +25,4 @@ keywords = [
 </div>
 
 <div class="terminal-prompt">/theantichris.com/~/projects</div>
-<div class="prompt-symbol">>>> </div>echo "More projects at <a title="Chrisotpher Lamm's Github projects" href="https://github.com/theantichris?tab=repositories">github.com/theantichris</a>"
+<div class="prompt-symbol">>>> </div>echo "More projects at <a title="Christopher Lamm's Github projects" href="https://github.com/theantichris?tab=repositories">github.com/theantichris</a>"
