@@ -3,7 +3,7 @@ title = "My First Blog Post"
 date = 2025-10-07T12:00:00-04:00
 draft = false
 description = "A brief introduction to my new blog"
-tags = ["meta", "ammouncement"]
+tags = ["meta", "announcement"]
 +++
 
 ## Welcome to My Blog
