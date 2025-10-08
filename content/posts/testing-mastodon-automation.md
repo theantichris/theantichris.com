@@ -2,8 +2,7 @@
 title = "Testing Mastodon Automation"
 date = 2025-10-08T01:05:00-04:00
 draft = false
-description = "Testing my new GitHub Actions workflow that automatically
-posts to Mastodon"
+description = "Testing my new GitHub Actions workflow that automatically posts to Mastodon"
 tags = ["automation", "mastodon", "github-actions"]
 +++
 
