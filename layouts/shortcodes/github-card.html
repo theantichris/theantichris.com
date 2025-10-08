@@ -7,7 +7,7 @@
 <div class="github-card">
   <div class="card-body">
     <div class="card-header">
-      <span class="repo-icon">📦</span>
+      <span class="repo-icon">[*]</span>
 
       <a title="{{ $data.name }}" href="{{ $data.html_url }}" class="repo-name">{{ $data.name }}</a>
     </div>
@@ -23,8 +23,8 @@
       </span>
       {{ end }}
 
-      <span class="stat stars">⭐️ {{ $data.stargazers_count }}</span>
-      <span class="stat forks">🔱 {{ $data.forks_count }}</span>
+      <span class="stat stars">stars: {{ $data.stargazers_count }}</span>
+      <span class="stat forks">forks: {{ $data.forks_count }}</span>
 
       {{ if $data.license }}
       <span class="stat license">{{ $data.license.spdx_id }}</span>
