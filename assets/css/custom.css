@@ -47,22 +47,8 @@ a {
   content: " ";
 }
 
-.index-content p:has(.terminal-prompt) {
-  margin: 0;
-}
-
 .post {
   padding: 15px 0 !important;
-}
-
-.nav {
-  margin: 0 0 1rem 0;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--accent);
-}
-
-.nav>div:first-of-type {
-  margin-top: 0.5rem;
 }
 
 /* GitHub Project Cards */

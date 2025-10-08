@@ -46,3 +46,7 @@ Christopher Lamm - Software Engineering + Machine Learning Leader with 20+ years
 
 I combine technical depth with human centered leadership. I'm passionate about building engineering organizations that deliver measurable outcomes while upholding craftsmanship, clarity, and continuous growth.
 
+<div class="terminal-prompt">/theantichris/~</div>
+<div class="prompt-symbol">>>> </div>cat cta.md
+
+<a title="Christopher Lamm on LinkedIn" href="https://www.linkedin.com/in/theantichris/">LinkedIn</a>, <a title="Christopher Lamm on GitHub" href="https://github.com/theantichris">GitHub</a>, <a title="Christopher Lamm on Mastodon" href="https://mastodon.social/@the_anti_chris">Mastodon</a>, or <a title="Email Christopher Lamm at christopherlamm81@icloud.com" href="mailto:christopherlamm81@icloud.com">send me a message</a>
