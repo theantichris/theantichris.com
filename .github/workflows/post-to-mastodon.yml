@@ -54,34 +54,30 @@ jobs:
         run: |
            FILE="${{ steps.detect.outputs.POST_FILE }}"
 
-           TITLE=$(awk '/^\+\+\+$/,/^\+\+\+$/ { if (/^title/) { gsub(/title = "|"/, ""); print; exit } }' "$FILE")
+           TITLE=$(awk -F'"' 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==1 && /^title/{print $2; exit}' "$FILE")
 
-           DESCRIPTION=$(awk '/^\+\+\+$/,/^\+\+\+$/ { if (/^description/) {  gsub(/description = "|"/, ""); print; exit } }' "$FILE")
+           DESCRIPTION=$(awk -F'"' 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==1 && /^description/{print $2; exit}' "$FILE")
            if [ -z "$DESCRIPTION" ]; then
-             DESCRIPTION=$(awk '/^\+\+\+$/ { c++ } c==2 && /^[^#]/ && NF {  print; exit }' "$FILE")
+             DESCRIPTION=$(awk 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==2 && /^[^#]/ && NF {print; exit}' "$FILE")
            fi
 
-           TAGS=$(awk '
-             BEGIN { in_tags=0; tags="" }
-             /^\+\+\+$/,/^\+\+\+$/ {
-               if (/^tags = \[/) {
-                 line=$0
-                 gsub(/tags = \[|\]|"/, "", line)
-                 gsub(/,/, "", line)
-                 gsub(/ +/, " ", line)
-                 split(line, arr, " ")
-                 for (i in arr) {
-                   if (arr[i] != "") tags = tags "#" arr[i] " "
-                 }
-               }
+           TAGS=$(awk 'BEGIN{fm=0; tags=""} /^\+\+\+$/{fm++; next} fm==1 && /^tags = \[/ {
+             line=$0
+             gsub(/tags = \[|\]|"/, "", line)
+             gsub(/,/, "", line)
+             gsub(/ +/, " ", line)
+             split(line, arr, " ")
+             for (i in arr) {
+               if (arr[i] != "") tags = tags "#" arr[i] " "
              }
-             END { print tags }
-           ' "$FILE")
+             print tags
+             exit
+           }' "$FILE")
 
            SLUG=$(basename "$FILE" .md)
            URL="https://theantichris.com/posts/${SLUG}/"
 
-           TOOT="New blog post: ${TITLE}\n\n${DESCRIPTION}\n\n${URL}"
+           TOOT="📝 New blog post: ${TITLE}\n\n${DESCRIPTION}\n\n${URL}"
            if [ -n "$TAGS" ]; then
              TOOT="${TOOT}\n\n${TAGS}"
            fi
