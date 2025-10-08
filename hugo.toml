@@ -7,7 +7,25 @@ theme = 'terminal'
  customCSS = ["css/custom.css"]
 
 [params.logo]
-logoText = 'theantichris.com'
+logoText = "cd /theantichris.com"
+
+[[menu.main]]
+identifier = "blog"
+name = "cd blog"
+url = "/posts/"
+weight = 1
+
+[[menu.main]]
+identifier = "projects"
+name = "cd projects"
+url = "/projects/"
+weight = 2
+
+[[menu.main]]
+identifier = "resume"
+name = "cd resume"
+url = "/resume/"
+weight = 3
 
 [markup.goldmark.renderer]
 unsafe = true
