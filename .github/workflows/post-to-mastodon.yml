@@ -1,0 +1,102 @@
+name: post to Mastodon
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/posts/**'
+
+jobs:
+  post-to-mastodon:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: detect new published posts
+        id: detect
+        run: |
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD -- 'content/posts/*.md')
+
+          for FILE in $CHANGED_FILES; do
+            if [[ "$FILE" == *"_index.md"* ]]; then
+              continue
+            fi
+
+            IS_PUBLISHED=$(awk '
+              BEGIN { in_frontmatter=0; draft="true"; date="" }
+              /^\+\+\+$/ { in_frontmatter=!in_frontmatter; next }
+              in_frontmatter && /^draft/ {
+                if ($3 == "false") draft="false"
+              }
+              in_frontmatter && /^date/ {
+                gsub(/["\047]/, "", $3); date=$3
+              }
+              END {
+                if (draft == "false" && date != "") print "true"
+                else print "false"
+              }
+            ' "$FILE")
+
+            if [ "$IS_PUBLISHED" = "true" ]; then
+              echo "NEW_POST=true" >> $GITHUB_OUTPUT
+              echo "POST_FILE=$FILE" >> $GITHUB_OUTPUT
+              break
+            fi
+          done
+
+      - name: extract post metadata
+        if: steps.detect.outputs.NEW_POST == 'true'
+        id: metadata
+        run: |
+           FILE="${{ steps.detect.outputs.POST_FILE }}"
+
+           TITLE=$(awk '/^\+\+\+$/,/^\+\+\+$/ { if (/^title/) { gsub(/title = "|"/, ""); print; exit } }' "$FILE")
+
+           DESCRIPTION=$(awk '/^\+\+\+$/,/^\+\+\+$/ { if (/^description/) {  gsub(/description = "|"/, ""); print; exit } }' "$FILE")
+           if [ -z "$DESCRIPTION" ]; then
+             DESCRIPTION=$(awk '/^\+\+\+$/ { c++ } c==2 && /^[^#]/ && NF {  print; exit }' "$FILE")
+           fi
+
+           TAGS=$(awk '
+             BEGIN { in_tags=0; tags="" }
+             /^\+\+\+$/,/^\+\+\+$/ {
+               if (/^tags = \[/) {
+                 line=$0
+                 gsub(/tags = \[|\]|"/, "", line)
+                 gsub(/,/, "", line)
+                 gsub(/ +/, " ", line)
+                 split(line, arr, " ")
+                 for (i in arr) {
+                   if (arr[i] != "") tags = tags "#" arr[i] " "
+                 }
+               }
+             }
+             END { print tags }
+           ' "$FILE")
+
+           SLUG=$(basename "$FILE" .md)
+           URL="https://theantichris.com/posts/${SLUG}/"
+
+           TOOT="New blog post: ${TITLE}\n\n${DESCRIPTION}\n\n${URL}"
+           if [ -n "$TAGS" ]; then
+             TOOT="${TOOT}\n\n${TAGS}"
+           fi
+
+           TOOT=$(echo -e "$TOOT" | head -c 480)
+
+           echo "TOOT<<EOF" >> $GITHUB_OUTPUT
+           echo "$TOOT" >> $GITHUB_OUTPUT
+           echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Post to Mastodon
+        if: steps.detect.outputs.NEW_POST == 'true'
+        run: |
+           curl -X POST "${{ secrets.MASTODON_INSTANCE }}/api/v1/statuses" \
+             -H "Authorization: Bearer ${{ secrets.MASTODON_ACCESS_TOKEN }}" \
+             -F "status=${{ steps.metadata.outputs.TOOT }}" \
+             -F "visibility=public"
+
