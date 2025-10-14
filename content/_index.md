@@ -36,7 +36,7 @@ Christopher Lamm - Software Engineering + Machine Learning Leader with 20+ years
 <div class="terminal-prompt">/theantichris.com/~</div>
 <div class="prompt-symbol">>>> </div>cat highlights.md
 
-- Led high impact software engineering and machine learning teams across full product lifecycles
+- Led high impact software engineering and machine learning teams across full product life cycles
 - Designed and delivered complex, scalable systems in production
 - Integrated ML features into software products with reliability
 - Fostered engineering culture around ownership, metrics, and excellence
@@ -50,3 +50,6 @@ I combine technical depth with human centered leadership. I'm passionate about b
 <div class="prompt-symbol">>>> </div>cat cta.md
 
 <a title="Christopher Lamm on LinkedIn" href="https://www.linkedin.com/in/theantichris/">LinkedIn</a>, <a title="Christopher Lamm on GitHub" href="https://github.com/theantichris">GitHub</a>, <a title="Christopher Lamm on Mastodon" href="https://mastodon.social/@the_anti_chris" rel="me">Mastodon</a>, or <a title="Email Christopher Lamm at christopherlamm81@icloud.com" href="mailto:christopherlamm81@icloud.com">send me a message</a>
+
+<div class="terminal-prompt">/theantichris.com/~</div>
+<div class="prompt-symbol">>>> </div>ls /blog
