@@ -1,5 +1,5 @@
 +++
-title = 'Ghost V2.0.0 Single Query'
+title = 'Ghost v2.0.0 Single Query'
 date = '2025-10-19T06:23:42-04:00'
 draft = false
 description = "Version v2.0.0 is out with single query command."
