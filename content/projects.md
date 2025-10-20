@@ -20,6 +20,7 @@ keywords = [
   {{< github-card user="theantichris" repo="dotfiles" >}}
   {{< github-card user="theantichris" repo="ghost" >}}
   {{< github-card user="theantichris" repo="granola" >}}
+  {{< github-card user="theantichris" repo="jupyter-notebooks" >}}
   {{< github-card user="theantichris" repo="remote-manager-playbook" >}}
   {{< github-card user="theantichris" repo="tavily-go" >}}
 </div>
