@@ -45,7 +45,7 @@ For the rest of this article I'll be using the `ghp` zsh function. If you'd rath
 You can create a new issue using the cli.
 
 ```sh
-# -R specifices the repo, -t title, and -b body
+# -R specifies the repo, -t title, and -b body
 gh issue create -R theantichris/example-repo -t "New feature: add user settings" -b "Need to implement user settings page"
 ```
 
@@ -55,7 +55,7 @@ You can then add the issue to the project.
 ghp item-add --url https://github.com/theantichris/example-repo/issues/123
 ```
 
-The `item-add` command can be used for add pull requests also.
+The `item-add` command can be used to add pull requests also.
 
 ## Listing Items
 
