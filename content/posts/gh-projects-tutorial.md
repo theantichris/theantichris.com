@@ -1,6 +1,6 @@
 +++
 title = 'gh Projects Tutorial'
-date = '2025-10-23T10:00:00-04:00'
+date = '2025-10-23T09:00:00-04:00'
 draft = false
 description = "How I use GitHub Projects from the command line."
 tags = ["tui", "cli", "GitHub", "gh", "project-management"]
