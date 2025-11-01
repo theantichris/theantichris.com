@@ -4,6 +4,12 @@ Personal website built with [Hugo](https://gohugo.io) using the [Terminal theme]
 
 ## Development
 
+Initialize the theme.
+
+```bash
+git submodule update --init --recursive
+```
+
 Start the development server (includes drafts):
 
 ```bash
