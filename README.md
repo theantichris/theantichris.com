@@ -18,6 +18,12 @@ hugo server -D
 
 Visit http://localhost:1313
 
+## Create a new post
+
+```bash
+hugo new content/posts/<title>
+```
+
 ## Building
 
 Build the site for production:
