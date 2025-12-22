@@ -2,7 +2,7 @@
 title = 'Sprawlrunner: Camera and Viewport Work, HUD, and Title Screen'
 date = '2025-12-22T14:41:34-05:00'
 draft = false
-description = "Recent Sprawlrunner work: a real camera + viewport (render only what's finisble), a basic HUD/message log, and a title screen that makes it feel like a game."
+description = "Recent Sprawlrunner work: a real camera + viewport (render only what's visible), a basic HUD/message log, and a title screen that makes it feel like a game."
 tags = ["sprawlrunner", "gamedev", "rougelike", "go", "ebiten", "ui"]
 +++
 
