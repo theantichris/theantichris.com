@@ -1,4 +1,6 @@
 Bubbletea
+CachyOS
+Hyprland
 cli
 sprawlrunner
 urfave
