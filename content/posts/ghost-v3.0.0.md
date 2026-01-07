@@ -8,7 +8,7 @@ tags = ["ghost", "go", "golang", "ai", "genai", "ollama", "cli", "cobra", "viper
 
 [Ghost v3.0.0](https://github.com/theantichris/ghost/releases/tag/v3.0.0) is a complete rewrite, again. The v2 codebase felt bloated so I rebuilt it with output formats, syntax highlighting, and simpler architecture.
 
-![Ghost v3 output formats](/img/ghost-v3.0.0/demo.gif)
+![Ghost v3 output formats](/img/ghostv3.gif)
 
 ## Back to Cobra and Viper
 
@@ -58,28 +58,114 @@ if inKey {
 }
 ```
 
-## LLM Package Simplification
+## Two Functions Instead of One
 
-The core types are minimal now. Just roles, messages, and optional image support.
+In v2 I tried to overload a single Generate endpoint function to handle both streaming responses and image analysis. This got messy. v3 splits them into two focused functions.
 
 ```go
-type Role string
+// AnalyzeImages sends a request to the chat endpoint with images to analyze and
+// returns the response message.
+func AnalyzeImages(ctx context.Context, host, model string, messages []ChatMessage) (ChatMessage, error) {
+    request := ChatRequest{
+        Model:    model,
+        Stream:   false,
+        Messages: messages,
+    }
 
-const (
-    RoleSystem    Role = "system"
-    RoleUser      Role = "user"
-    RoleAssistant Role = "assistant"
-)
+    var chatResponse ChatResponse
 
-type ChatMessage struct {
-    Role    Role     `json:"role"`
-    Content string   `json:"content"`
-    Images  []string `json:"images,omitempty"`
+    err := requests.
+        URL(host + "/chat").
+        BodyJSON(&request).
+        AddValidator(nil).
+        Handle(func(response *http.Response) error {
+            if response.StatusCode == http.StatusNotFound {
+                return fmt.Errorf("%w: %s", ErrModelNotFound, request.Model)
+            }
+
+            if response.StatusCode != http.StatusOK {
+                return fmt.Errorf("%w: %s", ErrUnexpectedStatus, response.Status)
+            }
+
+            return nil
+        }).
+        ToJSON(&chatResponse).
+        Fetch(ctx)
+
+    if err != nil {
+        return ChatMessage{}, fmt.Errorf("%w", err)
+    }
+
+    return ChatMessage{
+        Role:    RoleAssistant,
+        Content: chatResponse.Message.Content,
+    }, nil
+}
+
+// StreamChat sends a streaming request to the chat endpoint and returns the
+// response message.
+// onChunk is called for each streamed chunk of content.
+func StreamChat(ctx context.Context, host, model string, messages []ChatMessage,
+    onChunk func(string)) (ChatMessage, error) {
+
+    request := ChatRequest{
+        Model:    model,
+        Stream:   true,
+        Messages: messages,
+    }
+
+    var chatContent strings.Builder
+
+    err := requests.
+        URL(host + "/chat").
+        BodyJSON(&request).
+        AddValidator(nil).
+        Handle(func(response *http.Response) error {
+            defer func() {
+                _ = response.Body.Close()
+            }()
+
+            if response.StatusCode == http.StatusNotFound {
+                return fmt.Errorf("%w: %s", ErrModelNotFound, request.Model)
+            }
+
+            if response.StatusCode != http.StatusOK {
+                return fmt.Errorf("%w: %s", ErrUnexpectedStatus, response.Status)
+            }
+
+            decoder := json.NewDecoder(response.Body)
+
+            for {
+                var chunk ChatResponse
+
+                if err := decoder.Decode(&chunk); err == io.EOF {
+                    break
+                } else if err != nil {
+                    return fmt.Errorf("%w: %w", ErrDecodeChunk, err)
+                }
+
+                onChunk(chunk.Message.Content)
+
+                chatContent.WriteString(chunk.Message.Content)
+            }
+
+            return nil
+        }).
+        Fetch(ctx)
+
+    if err != nil {
+        return ChatMessage{}, fmt.Errorf("%w", err)
+    }
+
+    return ChatMessage{
+        Role:    RoleAssistant,
+        Content: chatContent.String(),
+    }, nil
 }
 ```
 
-Starting fresh let me separate concerns better - CLI layer, API client, and formatting are cleanly split. The v2 code accumulated complexity from trying different approaches.
+`AnalyzeImages` blocks until the full response comes back since image analysis doesn't benefit from streaming. I still need to wire this into the bubbletea program to show the processing message.
 
-## Next Up
+`StreamChat` uses a simpler callback than v2 for each chunk which lets the CLI layer handle rendering while the LLM package stays focused on the API.
 
-I realized I'm trying to make everything perfect and not making it very usable. I do want to get to TUI and do some UX improvements around images but without web search this is pretty useless as a digital assistant. I'll probably get to that next then come back to some UX improvements.
+Starting fresh let me separate concerns better. CLI layer, API client, and formatting are cleanly split. The v2 code accumulated complexity from trying different approaches.
