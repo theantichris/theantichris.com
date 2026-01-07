@@ -1,24 +1,81 @@
-# Agent Guide for theantichris.com
+# Agent Guide
 
-## Build/Dev/Test Commands
-- **Dev server**: `hugo server -D` (includes drafts)
-- **Build**: `hugo --gc --minify` (outputs to `./public`)
-- **Lint markdown**: Check against `.markdownlint.yml` rules (ATX headers, 4-space indent, no hard tabs)
-- **No test suite**: This is a static Hugo site
+## Blog Writing Style
 
-## Code Style Guidelines
+### Voice & Approach
 
-### Markdown Content (`content/**/*.md`)
-- Use ATX-style headers (`#`, `##`, etc.)
-- 4-space indentation for lists
-- No hard tabs, use spaces only
-- Front matter in TOML format (`+++` delimiters)
-- Required front matter: `date`, `draft`, `title`
+- Direct, technical voice with minimal fluff
+- First-person "I" perspective
+- Terse transitions, no unnecessary connective tissue
+- No over-explanation of technical terms (assume technical audience)
+- Include reflection on mistakes/lessons learned (analytical, matter-of-fact tone)
+- Intentionally minimal or no formal conclusions
 
-### Configuration (`hugo.toml`)
-- TOML format for all config files
-- Follow existing parameter structure under `[params]`
+### Content Guidelines
 
-### Custom CSS (`assets/css/custom.css`)
-- Minimal overrides only, theme provides base styles
-- Follow theme's terminal aesthetic
+- **Audience**: Other software engineers, recruiters, potential employers
+- **Purpose**: Marketing, skill sharpening, knowledge sharing
+- **Topics**: Tech-focused only (projects, tools, workflows, learning)
+- **Post triggers**: Milestones reached or novel techniques learned
+- **Length**: As short as possible while covering topic adequately
+
+### Structure
+
+- Simple, logical organization when natural (use headers for complex topics)
+- Problem→solution format for tutorials
+- Opening style varies by post type and content
+- Include next steps only when relevant to main topic
+- Posts are time-stamped snapshots (rarely edited after publish)
+
+### Technical Content
+
+- Code depth depends on novelty/interest of implementation
+- Always use code blocks (not screenshots) for copyable code
+- Include code examples when they illuminate the explanation
+- Liberal linking to projects, tools, and documentation
+- Screenshots/images when they enhance understanding (demos, UI, visual results)
+
+### Front Matter & Metadata
+
+- **Titles**: Post-dependent (descriptive, version announcements, or narrative)
+- **Tags**: Granular and specific for SEO/discoverability
+- **Description**: Clear summary of post content
+
+### Revision Notes
+
+- Self-critique should be analytical and include what you'd do differently
+- Focus on lessons applicable to readers
+
+## Blog Post Writing Process
+
+### Before Writing
+
+- **Interview first**: Understand full context before drafting
+- Ask about:
+    - Why this change/project/milestone matters
+    - What was wrong with the old approach (for rewrites/refactors)
+    - What code is interesting enough to show
+    - Whether there are demos/screenshots available or needed
+- Get clear on technical decisions and their rationale
+
+### Drafting
+
+- Show draft sections or opening options for approval before finalizing
+- Use placeholders for media that needs to be created (e.g., `/img/project-name/demo.gif`)
+- Pick 2-3 most impactful code snippets rather than showing everything available
+- Offer multiple approaches when appropriate (opening styles, code examples)
+
+### Code Selection
+
+- **Prefer**: Interesting implementation details over boring type definitions
+- **Show full functions** when they illustrate design decisions
+- **Include context** about why the code matters (e.g., "In v2 I tried X, which got messy")
+- **For library/framework changes**: Brief explanation of the decision without being preachy
+- **Always ask** which code to show rather than assuming
+
+### Technical Writing
+
+- Explain what was wrong with old approaches when discussing rewrites
+- Link liberally to tools, libraries, and documentation mentioned
+- Include "why this matters" context for technical decisions
+- For changes between versions, highlight the problem being solved
