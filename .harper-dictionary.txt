@@ -1,6 +1,10 @@
 Bubbletea
 CachyOS
+Cyberwave
 Hyprland
 cli
+shortcode
 sprawlrunner
+theantichris
 urfave
+v2
