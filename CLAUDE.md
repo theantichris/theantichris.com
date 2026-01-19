@@ -32,6 +32,16 @@ hugo new content/posts/<title>
 | `layouts/shortcodes/github-card.html` | GitHub repo card shortcode |
 | `BLOG_GUIDELINES.md`                  | Blog writing guidelines    |
 
+## Shortcodes
+
+### github-card
+
+Requires named parameters:
+
+```hugo
+{{< github-card user="theantichris" repo="ghost" >}}
+```
+
 ## Blog Writing
 
 See `BLOG_GUIDELINES.md` for working relationship and style guide.
