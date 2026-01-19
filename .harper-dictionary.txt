@@ -2,6 +2,7 @@ Bubbletea
 CachyOS
 Cyberwave
 Hyprland
+Tavily
 cli
 shortcode
 sprawlrunner
