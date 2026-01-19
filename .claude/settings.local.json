@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__github__get_release_by_tag",
+      "mcp__github__list_commits",
+      "mcp__github__pull_request_read",
+      "mcp__github__get_file_contents",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)"
+    ]
+  }
+}

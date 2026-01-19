@@ -15,12 +15,18 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: detect new published posts
         id: detect
         run: |
-          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD -- 'content/posts/*.md')
+          # Use the before SHA for push events to catch all commits in a push
+          # Fall back to HEAD^ for workflow_dispatch
+          BEFORE_SHA="${{ github.event.before }}"
+          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE_SHA="HEAD^"
+          fi
+          CHANGED_FILES=$(git diff --name-only "$BEFORE_SHA" HEAD -- 'content/posts/*.md')
 
           for FILE in $CHANGED_FILES; do
             if [[ "$FILE" == *"_index.md"* ]]; then
