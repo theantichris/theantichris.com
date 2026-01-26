@@ -44,4 +44,4 @@ Requires named parameters:
 
 ## Blog Writing
 
-See `BLOG_GUIDELINES.md` for working relationship and style guide.
+See `BLOG_GUIDELINES.md` for working relationship, style guide, and release post patterns.

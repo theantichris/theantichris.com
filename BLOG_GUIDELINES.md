@@ -108,3 +108,18 @@ Christopher does the bulk of the writing. Claude's role is as thought partner
 - Link liberally to tools, libraries, and documentation mentioned
 - Include "why this matters" context for technical decisions
 - For changes between versions, highlight the problem being solved
+
+## Release Post Patterns
+
+### Structure (based on Ghost v3.x posts)
+1. Opening paragraph with version and main feature
+2. GitHub card shortcode immediately after intro
+3. Demo gif/screenshot early in post
+4. 1-2 code sections with brief explanations
+5. "What's Next" section teasing future work
+6. Link to release notes at the end
+
+### Content Guidelines for Release Posts
+- Skip features covered in previous release posts (avoid repetition across the series)
+- Only include finished features, not work-in-progress
+- Code snippets should show interesting implementation details, not boilerplate
