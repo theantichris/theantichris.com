@@ -6,7 +6,8 @@
       "mcp__github__pull_request_read",
       "mcp__github__get_file_contents",
       "Bash(gh run list:*)",
-      "Bash(gh run view:*)"
+      "Bash(gh run view:*)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
