@@ -7,7 +7,9 @@
       "mcp__github__get_file_contents",
       "Bash(gh run list:*)",
       "Bash(gh run view:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "mcp__github__get_latest_release",
+      "mcp__github__issue_read"
     ]
   }
 }
