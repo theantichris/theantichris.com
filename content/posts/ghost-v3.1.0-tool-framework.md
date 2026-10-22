@@ -67,10 +67,6 @@ for {
 
 This pattern lets the model chain multiple tool calls before giving a final answer.
 
-## Demo
-
-![ghost search](/img/ghost-v3.1.0-tool-framework/search.gif)
-
 ## What's Next
 
 The framework is ready for more tools. File operations, code execution, API calls - anything that can return a string result can be a tool. I'll add new ones as I need them.

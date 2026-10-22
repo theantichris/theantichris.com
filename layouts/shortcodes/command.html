@@ -1,0 +1,5 @@
+<div class="terminal-command">
+  <span class="terminal-prompt">{{ .Get "path" | default "~" }}</span>
+  <span class="prompt-symbol" aria-hidden="true">❯</span>
+  <span class="command-text">{{ strings.TrimSpace .Inner | safeHTML }}</span>
+</div>

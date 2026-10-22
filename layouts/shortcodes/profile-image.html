@@ -1,0 +1,5 @@
+{{ with resources.Get "img/headshot.png" }}
+  {{ $small := .Resize "150x webp q80" }}
+  {{ $large := .Resize "300x webp q80" }}
+  <img src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 150w, {{ $large.RelPermalink }} 300w" sizes="150px" width="{{ $small.Width }}" height="{{ $small.Height }}" alt="Christopher Lamm" class="profile-image" decoding="async">
+{{ end }}

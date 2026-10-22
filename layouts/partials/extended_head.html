@@ -1,0 +1,7 @@
+{{/* Keep custom styles outside css/*.css so they load once, after Terminal. */}}
+{{ range .Site.Params.customCSS }}
+  {{ with resources.Get . }}
+    {{ $styles := . | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ end }}
+{{ end }}

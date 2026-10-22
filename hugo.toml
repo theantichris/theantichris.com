@@ -4,28 +4,32 @@ title = 'theantichris.com | christopher lamm'
 theme = 'terminal'
 
 [params]
- customCSS = ["css/custom.css"]
+ customCSS = ["css/custom/theme.css"]
+ readMore = "less post.md"
 
 [params.logo]
-logoText = "cd /theantichris.com"
+logoText = "cd ~"
 
 [[menu.main]]
 identifier = "blog"
-name = "cd blog"
+name = "cd ~/posts"
 url = "/posts/"
 weight = 1
 
 [[menu.main]]
 identifier = "projects"
-name = "cd projects"
+name = "cd ~/projects"
 url = "/projects/"
 weight = 2
 
 [[menu.main]]
 identifier = "resume"
-name = "cd resume"
+name = "cd ~/resume"
 url = "/resume/"
 weight = 3
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+noClasses = false

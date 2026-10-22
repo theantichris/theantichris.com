@@ -10,7 +10,7 @@ Yesterday I release the first version of the major refactor for [Ghost](https://
 
 ![Sending ghost a prompt](/img/ghost-v2.0.0-single-query/root.gif)
 
-# Exit Codes
+## Exit Codes
 
 I decided I wanted to be able to tie errors to proper exit codes so created a package that defined a new error type. Why? I'm just like that.
 

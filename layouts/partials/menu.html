@@ -1,0 +1,9 @@
+<nav class="navigation-menu" aria-label="Main navigation">
+  <ul class="navigation-menu__inner">
+    {{ range .Site.Menus.main }}
+      {{ $currentPage := eq $.RelPermalink .URL }}
+      {{ $currentSection := and (not $currentPage) (strings.HasPrefix $.RelPermalink .URL) }}
+      <li><a href="{{ .URL }}"{{ if $currentPage }} aria-current="page"{{ else if $currentSection }} aria-current="location"{{ end }}>{{ .Name }}</a></li>
+    {{ end }}
+  </ul>
+</nav>

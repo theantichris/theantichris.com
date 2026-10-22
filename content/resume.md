@@ -15,8 +15,7 @@ keywords = [
 ]
 +++
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat resume.md
+{{< command path="~/resume" >}}cat resume.md{{< /command >}}
 
 ## Christopher Lamm
 
@@ -28,8 +27,7 @@ Knoxville, TN | christopherlamm81@gmail.com | 865-287-4495
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat professional_summary.md
+{{< command path="~/resume" >}}cat professional_summary.md{{< /command >}}
 
 Engineering leader with 30+ years of software development experience and a track record of building engineering organizations, developing leaders, and delivering technology aligned with business objectives.
 
@@ -37,8 +35,7 @@ Currently lead Data Engineering, Machine Learning, and AI Engineering at Company
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat core_competencies.md
+{{< command path="~/resume" >}}cat core_competencies.md{{< /command >}}
 
 **Engineering Leadership:** Organizational Design, Team Building, Leadership Development, Hiring, Career Frameworks, Cross-Functional Leadership
 
@@ -48,8 +45,7 @@ Currently lead Data Engineering, Machine Learning, and AI Engineering at Company
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/companycam.md
+{{< command path="~/resume" >}}cat experience/companycam.md{{< /command >}}
 
 ### Senior Engineering Manager | CompanyCam
 
@@ -66,8 +62,7 @@ Lead Data Engineering, Machine Learning, and AI Engineering, with six direct rep
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/artofedu.md
+{{< command path="~/resume" >}}cat experience/artofedu.md{{< /command >}}
 
 ### Director of Software Engineering | The Art of Education University
 
@@ -80,8 +75,7 @@ Established the internal engineering organization and owned technical strategy, 
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/kxvl.md
+{{< command path="~/resume" >}}cat experience/kxvl.md{{< /command >}}
 
 ### Director of Software Engineering | KXVL Software
 
@@ -94,8 +88,7 @@ Founding engineer and director, sharing technical leadership of a four-person en
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/additerra.md
+{{< command path="~/resume" >}}cat experience/additerra.md{{< /command >}}
 
 ### CTO & Founding Engineer | Additerra Inc.
 
@@ -105,8 +98,7 @@ Partnered with a nontechnical founder to develop an internal prototype of a manu
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/averitt.md
+{{< command path="~/resume" >}}cat experience/averitt.md{{< /command >}}
 
 ### Lead Software Engineer | Averitt Express
 
@@ -117,8 +109,7 @@ Partnered with a nontechnical founder to develop an internal prototype of a manu
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat experience/eventbooking.md
+{{< command path="~/resume" >}}cat experience/eventbooking.md{{< /command >}}
 
 ### Software Engineer (formerly QA Engineer) | EventBooking.com
 
@@ -128,8 +119,7 @@ Progressed from quality assurance into software engineering, contributing to ven
 
 ---
 
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat education.md
+{{< command path="~/resume" >}}cat education.md{{< /command >}}
 
 ## Education
 
