@@ -5,6 +5,7 @@ theme = 'terminal'
 
 [params]
  customCSS = ["css/custom/theme.css"]
+ readMore = "less post.md"
 
 [params.logo]
 logoText = "cd /theantichris.com"
