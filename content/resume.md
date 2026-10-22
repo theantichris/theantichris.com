@@ -1,8 +1,9 @@
 +++
 date = '2025-10-06T08:11:00-04:00'
+lastmod = '2026-10-22'
 draft = false
 title = '~/resume'
-description = 'Christopher Lamm - Resume | Senior Engineering Manager with 20+ years of experience leading high-performing teams and delivering scalable solutions'
+description = 'Christopher Lamm - Resume | Senior Engineering Manager with 30+ years of software development experience leading engineering organizations, AI initiatives, and platform modernization'
 keywords = [
   "Christopher Lamm resume",
   "engineering manager resume",
@@ -21,119 +22,109 @@ keywords = [
 
 Senior Engineering Manager
 
+Knoxville, TN | christopherlamm81@gmail.com | 865-287-4495
+
+[GitHub](https://github.com/theantichris) | [LinkedIn](https://www.linkedin.com/in/theantichris/)
+
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat professional_summary.md
 
-Seasoned engineering leader with 30+ years of software development experience and proven expertise in building high-performing teams, driving organizational transformation, and delivering scalable solutions. Specializes in cross-functional leadership, process optimization, and mentoring engineering talent from IC to management levels. Track record of successfully managing diverse technical teams across data engineering, machine learning, and full-stack development in SaaS, fintech, edtech, and enterprise environments.
+Engineering leader with 30+ years of software development experience and a track record of building engineering organizations, developing leaders, and delivering technology aligned with business objectives.
+
+Currently lead Data Engineering, Machine Learning, and AI Engineering at CompanyCam, including the CompanyCam AI Assistant initiative. Previously held Director of Software Engineering roles at two organizations, with experience spanning organizational development, technical strategy, platform modernization, and product delivery.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat core_competencies.md
 
-Leadership & Management: Team Building, Cross-functional Collaboration, Engineering Process Design, Talent Development, Performance Management, Strategic Planning
+**Engineering Leadership:** Organizational Design, Team Building, Leadership Development, Hiring, Career Frameworks, Cross-Functional Leadership
 
-Technical Expertise: JavaScript, Go, Python, PHP, Ruby on Rails, Node.js, Vue.js, Docker, REST APIs, Microservices, CI/CD, GitHub Actions
+**Strategy & Execution:** Engineering Strategy, Technical Roadmaps, AI Product Delivery, Platform Modernization, Engineering Operations, Change Management
 
-Infrastructure & Tools: AWS, Heroku, Docker, SQL/NoSQL, Git, GitHub, Jira, Swarmia, Linux, MacOS, Automated Testing
+**Technical Leadership:** Software Architecture, AI/ML Platforms, Data Engineering, Cloud Infrastructure, APIs, CI/CD
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/companycam.md
 
-### Senior Engineering Manager | CompanyCam, Remote | *2022 - Present*
+### Senior Engineering Manager | CompanyCam
 
-Lead multiple specialized engineering teams for a mobile and web application company serving the construction industry. Currently manage Data Engineering and Machine Learning teams while providing strategic leadership across the engineering organization.
+*Remote | 2022–Present*
 
-Key Achievements:
-- Built and scaled specialized teams: Currently lead Data Engineering and Machine Learning teams, building both from the ground up; previously led Input, Collaborators, Integrations, Activations, and Growth teams throughout tenure
-- Drove organizational transformation: Led critical transitions from Basecamp to Jira for project management and migrated software capitalization tracking from Notion databases to Swarmia integrated with Jira and GitHub
-- Revamped engineering standards: Updated department-wide engineering level expectations, improving role clarity, collaboration effectiveness, and career growth pathways
-- Enhanced talent acquisition: Redesigned engineering hiring process to better identify cultural fit and accurately evaluate technical capabilities
-- Developed engineering leaders: Successfully mentored individual contributors through promotion to engineering management roles
-- Cross-functional partnership: Collaborated with People (HR) team to promote company culture and support employee wellness initiatives
+Lead Data Engineering, Machine Learning, and AI Engineering, with six direct reports and leadership responsibility for two additional Staff Engineers.
 
-Technical Leadership:
-- Managed diverse technology stacks including Ruby on Rails, React, React Native, and Python across multiple teams
-- Implemented SDLC improvements and project management tooling changes to support organizational scaling
-- Oversaw engineering processes, code quality standards, and deployment practices
+- **AI product leadership:** Directed engineering strategy, technical decisions, execution, and launch readiness for the CompanyCam AI Assistant. Expanded availability to 100% of new customer accounts by October 2026, with weekly companies actively messaging the Assistant growing from 19 to 854 between late July and mid-October.
+- **Organizational development:** Built three engineering teams from the ground up through hiring and internal reorganization, defining their missions, technical ownership, and cross-functional operating models.
+- **ML platform modernization:** Led strategy, vendor selection, and execution of infrastructure modernization using Modal and Weights & Biases. During the effort, the team reduced repeated document-extraction failures by approximately 80%.
+- **Data platform modernization:** Championed the company-wide transition from legacy Snowplow-based event tracking to Amplitude instrumentation, improving data integrity, validation, and developer experience while eliminating legacy vendor costs.
+- **Talent development:** Established department-wide engineering leveling and structured hiring practices. Mentored three individual contributors who earned promotions into engineering management.
+- **Engineering operations:** Led department-wide adoption of Jira and modernization of software capitalization tracking through Swarmia, improving visibility, coordination, and reporting while reducing manual effort.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/artofedu.md
 
-### Director of Software Engineering | The Art of Education University, Remote | *2020 - 2022*
+### Director of Software Engineering | The Art of Education University
 
-Built and led engineering department during critical transition from contract development to in-house capabilities for an online education platform.
+*Remote | 2020–2022*
 
-Key Achievements:
-- Department establishment: Hired and managed team of 6 software engineers and 2 QA engineers
-- Platform modernization: Spearheaded replatforming effort from legacy WordPress to modern microservices architecture
-- Technical architecture: Designed and implemented software and hosting architecture supporting scalable growth
-- Stakeholder collaboration: Partnered with Product, Design, and business stakeholders for requirements gathering, planning, and feature development
+Established the internal engineering organization and owned technical strategy, architecture, and engineering roadmap for an online education platform.
+
+- Built and led a department of six software engineers and two QA engineers, completing the transition of software development and maintenance from external contractors.
+- Led phased modernization of a legacy WordPress platform, owning architecture, technology, and hosting decisions. Delivered production microservices for tenant management, authentication, authorization, and HubSpot CRM integration.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/kxvl.md
 
-### Director of Software Engineering | KXVL Software, Knoxville, TN | *2019 - 2020*
+### Director of Software Engineering | KXVL Software
 
-Led software development team in cryptocurrency startup environment, managing full-stack development for financial services platform.
+*Knoxville, TN | 2019–2020*
 
-Key Achievements:
-- Team building: Hired and led development team working with Go, Node.js, Python, Vue.js, and Elixir
-- Product launch: Designed, built, and successfully launched cryptocurrency brokerage platform
-- Integration development: Built RESTful web services and client libraries for banking and identity service integrations
-- DevOps implementation: Established CI processes enabling continuous delivery practices
+Founding engineer and director, sharing technical leadership of a four-person engineering team with a fellow founding engineer.
+
+- Co-led architecture and successful production launch of a cryptocurrency brokerage platform processing real customer transactions.
+- Owned financial services development, personally implementing banking integrations, deposits, withdrawals, reconciliation, and KYC/AML integrations. Shared responsibility for engineering strategy and CI/CD.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/additerra.md
 
-### Startup CTO | Additerra Inc., Knoxville, TN | *2016 - 2019*
+### CTO & Founding Engineer | Additerra Inc.
 
-Led technical strategy and development for manufacturing estimation SaaS platform.
+*Knoxville, TN | 2016–2019*
 
-Key Achievements:
-- Product development: Built SaaS solution in PHP and Vue.js enabling automated manufacturing cost estimation from 3D schematics
-- Infrastructure management: Handled DevOps solutions including hosting architecture and CI implementation
-- Technical leadership: Managed full software development lifecycle from concept to production
+Partnered with a nontechnical founder to develop an internal prototype of a manufacturing cost-estimation SaaS platform. Owned technical strategy, architecture, and infrastructure while building a Laravel and Vue application supporting customer, project, material, and machine-profile management and estimation workflows.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/averitt.md
 
-### Lead Software Engineer | Averitt Express, Remote | *2015 - 2019*
+### Lead Software Engineer | Averitt Express
 
-Developed enterprise software solutions for logistics company, focusing on internal tools and customer-facing services.
+*Remote | 2015–2019*
 
-Key Achievements:
-- Enterprise development: Built comprehensive internal software managing HR to shipping processes using PHP and Angular
-- Authentication systems: Integrated Active Directory with Laravel framework for secure authentication and authorization
-- Process improvement: Enhanced engineering practices including CI implementation and unit testing adoption
-- API development: Created customer-facing RESTful services for shipping account management
+- Contributed to Symfony application architecture and engineering standards for enterprise logistics systems. Introduced CI and unit testing practices and drove frontend modernization from jQuery to Angular.
+- Implemented Active Directory integration and designed customer-facing RESTful APIs for shipping account management.
 
 ---
 
 <div class="terminal-prompt">/theantichris.com/~/resume</div>
 <div class="prompt-symbol">>>> </div>cat experience/eventbooking.md
 
-### Software Engineer | EventBooking.com, Knoxville, TN | *2008 - 2015*
+### Software Engineer (formerly QA Engineer) | EventBooking.com
 
-Full-stack development for venue booking and management platform.
+*Knoxville, TN | 2008–2015*
 
-Key Achievements:
-- Product development: Built booking platform for small venues using C# .Net and Angular
-- CMS development: Created industry-specific content management system with PHP and Angular
-- Quality assurance: Oversaw QA testing processes and deployment procedures
-- Custom solutions: Developed XML schema enabling client customization of booking software
+Progressed from quality assurance into software engineering, contributing to venue management software. Co-developed a production CMS and independently designed an XML-based customization capability adopted by customers.
 
 ---
 
@@ -142,16 +133,5 @@ Key Achievements:
 
 ## Education
 
-Associate of Applied Science, Information Technology - Multimedia  
-ITT Technical Institute, Knoxville, TN | *2008*
-
----
-
-<div class="terminal-prompt">/theantichris.com/~/resume</div>
-<div class="prompt-symbol">>>> </div>cat additional_info.md
-
-## Additional Information
-
-- Remote work expertise: 17+ years leading and working with distributed engineering teams
-- Mentorship focus: Passionate about developing engineering talent and building strong, collaborative teams
-- Industry experience: Deep expertise in SaaS, fintech, edtech, logistics, and construction technology sectors
+**Associate of Applied Science, Information Technology, Multimedia**<br>
+ITT Technical Institute | 2008
