@@ -1,5 +1,6 @@
 +++
 date = '2025-10-06T08:11:00-04:00'
+lastmod = '2026-10-22'
 draft = false
 title = '~'
 keywords = [
@@ -20,30 +21,30 @@ keywords = [
 
 {{< command path="~" >}}whoami{{< /command >}}
 
-Christopher Lamm - Software Engineering + Machine Learning Leader with 20+ years experience build software and teams.
+Christopher Lamm — Engineering leader with 30+ years of software development experience across software, data, and AI. I build teams and guide technical strategy from planning through delivery.
 <img src="/img/headshot.png" alt="Christopher Lamm" class="profile-image">
 
 {{< command path="~" >}}cat focus_areas.md{{< /command >}}
 
 | Domain                            | Role                                 | Impact                                                   |
 |-----------------------------------|--------------------------------------|------------------------------------------------------------|
-| Team Leadership & Culture         | Coaching, structuring, strategy      | High-performing, resilient, autonomous engineering teams   |
-| Software Architecture & Delivery  | Planning, execution, iteration       | Reliable, scalable products built on strong foundations     |
-| ML Integration & Innovation        | Bridging research & production       | Intelligent features that drive value, integrated into product |
+| Engineering Leadership            | Organizational design, hiring, coaching | Teams with clear ownership and paths into leadership    |
+| AI & ML Product Delivery          | Technical strategy, execution, launch | AI features delivered to customers                      |
+| Platform Modernization            | Architecture, infrastructure, data   | More reliable systems and better developer experience   |
 
 {{< command path="~" >}}cat highlights.md{{< /command >}}
 
-- Led high impact software engineering and machine learning teams across full product life cycles
-- Designed and delivered complex, scalable systems in production
-- Integrated ML features into software products with reliability
-- Fostered engineering culture around ownership, metrics, and excellence
+- Built and led engineering teams through growth and organizational change.
+- Guided AI and machine learning initiatives from strategy to production.
+- Modernized software and data platforms to improve reliability and delivery.
+- Developed engineers and managers through coaching and clear career paths.
 
 {{< command path="~" >}}cat about_me.md{{< /command >}}
 
-I combine technical depth with human centered leadership. I'm passionate about building engineering organizations that deliver measurable outcomes while upholding craftsmanship, clarity, and continuous growth.
+I combine hands-on engineering experience with organizational leadership. My focus is developing people, establishing clear ownership, and connecting technical decisions to business goals.
 
 {{< command path="~" >}}cat contact.md{{< /command >}}
 
-<a title="Christopher Lamm on LinkedIn" href="https://www.linkedin.com/in/theantichris/">LinkedIn</a>, <a title="Christopher Lamm on GitHub" href="https://github.com/theantichris">GitHub</a>, <a title="Christopher Lamm on Mastodon" href="https://mastodon.social/@the_anti_chris" rel="me">Mastodon</a>, <a title="Christopher Lamm on Medium" href="https://medium.com/@theantichris">Medium</a> or <a title="Email Christopher Lamm at christopherlamm81@icloud.com" href="mailto:christopherlamm81@icloud.com">send me a message</a>
+<a title="Christopher Lamm on LinkedIn" href="https://www.linkedin.com/in/theantichris/">LinkedIn</a>, <a title="Christopher Lamm on GitHub" href="https://github.com/theantichris">GitHub</a>, <a title="Christopher Lamm on Mastodon" href="https://mastodon.social/@the_anti_chris" rel="me">Mastodon</a>, <a title="Christopher Lamm on Medium" href="https://medium.com/@theantichris">Medium</a> or <a title="Email Christopher Lamm at christopherlamm81@gmail.com" href="mailto:christopherlamm81@gmail.com">send me a message</a>
 
 {{< command path="~" >}}ls ~/posts{{< /command >}}
