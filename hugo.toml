@@ -4,7 +4,7 @@ title = 'theantichris.com | christopher lamm'
 theme = 'terminal'
 
 [params]
- customCSS = ["css/custom.css"]
+ customCSS = ["css/custom/theme.css"]
 
 [params.logo]
 logoText = "cd /theantichris.com"
@@ -29,3 +29,6 @@ weight = 3
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+noClasses = false
