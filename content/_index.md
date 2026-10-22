@@ -3,6 +3,7 @@ date = '2025-10-06T08:11:00-04:00'
 lastmod = '2026-10-22'
 draft = false
 title = '~'
+description = 'Christopher Lamm — engineering leadership, team development, and technical strategy across software, data, and AI.'
 keywords = [
   "Christopher Lamm",
   "software engineering leader",
@@ -22,7 +23,7 @@ keywords = [
 {{< command path="~" >}}whoami{{< /command >}}
 
 Christopher Lamm — Engineering leader with 30+ years of software development experience across software, data, and AI. I build teams and guide technical strategy from planning through delivery.
-<img src="/img/headshot.png" alt="Christopher Lamm" class="profile-image">
+{{< profile-image >}}
 
 {{< command path="~" >}}cat focus_areas.md{{< /command >}}
 

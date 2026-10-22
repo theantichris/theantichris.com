@@ -37,6 +37,12 @@ jobs:
           hugo-version: '0.168.0'
           extended: true
 
+      - name: check publishing logic
+        run: python3 -m unittest discover -s tests -v
+
+      - name: check code copying
+        run: node --test tests/code-copy.test.cjs
+
       - name: setup pages
         id: pages
         uses: actions/configure-pages@v5

@@ -34,10 +34,31 @@ hugo --gc --minify
 
 Output will be in `./public`
 
+## Validation
+
+Run the publishing and clipboard regression checks without installing packages:
+
+```bash
+python3 -m unittest discover -s tests -v
+node --test tests/code-copy.test.cjs
+hugo --gc --minify
+```
+
+The publishing tests use temporary Git repositories and mocked HTTP requests.
+To preview announcements for a revision range without sending them:
+
+```bash
+python3 scripts/mastodon_posts.py --before <previous-sha> --after HEAD
+```
+
+The Mastodon workflow announces newly published posts and draft-to-published
+transitions. Edits to existing published posts do not trigger announcements.
+
 ## Project Structure
 
 - `content/` - Markdown content files
 - `assets/css/custom/theme.css` - Custom styling with Cyberpunk palette
+- `assets/img/` - Original portraits processed by Hugo into responsive images
 - `static/` - Static assets (images, fonts, etc.)
 - `hugo.toml` - Hugo configuration
 - `themes/terminal/` - Terminal theme (submodule)

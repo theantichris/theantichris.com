@@ -8,6 +8,9 @@ on:
       - 'content/posts/**'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   post-to-mastodon:
     runs-on: ubuntu-latest
@@ -17,94 +20,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: detect new published posts
-        id: detect
-        run: |
-          # Use the before SHA for push events to catch all commits in a push
-          # Fall back to HEAD^ for workflow_dispatch
-          BEFORE_SHA="${{ github.event.before }}"
-          if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
-            BEFORE_SHA="HEAD^"
-          fi
-          CHANGED_FILES=$(git diff --name-only "$BEFORE_SHA" HEAD -- 'content/posts/*.md')
-
-          for FILE in $CHANGED_FILES; do
-            if [[ "$FILE" == *"_index.md"* ]]; then
-              continue
-            fi
-
-            IS_PUBLISHED=$(awk '
-              BEGIN { 
-                in_frontmatter=0; draft="true"; date=""
-                "date -u +%Y-%m-%dT%H:%M:%S" | getline now
-              }
-              /^\+\+\+$/ { in_frontmatter=!in_frontmatter; next }
-              in_frontmatter && /^draft/ {
-                if ($3 == "false") draft="false"
-              }
-              in_frontmatter && /^date/ {
-                gsub(/["\047]/, "", $3)
-                split($3, parts, /[-+][0-9]{2}:[0-9]{2}/)
-                date=parts[1]
-              }
-              END {
-                if (draft == "false" && date != "" && date <= now) print "true"
-                else print "false"
-              }
-            ' "$FILE")
-
-            if [ "$IS_PUBLISHED" = "true" ]; then
-              echo "NEW_POST=true" >> $GITHUB_OUTPUT
-              echo "POST_FILE=$FILE" >> $GITHUB_OUTPUT
-              break
-            fi
-          done
-
-      - name: extract post metadata
-        if: steps.detect.outputs.NEW_POST == 'true'
-        id: metadata
-        run: |
-           FILE="${{ steps.detect.outputs.POST_FILE }}"
-
-           TITLE=$(awk -F'"' 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==1 && /^title/{print $2; exit}' "$FILE")
-
-           DESCRIPTION=$(awk -F'"' 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==1 && /^description/{print $2; exit}' "$FILE")
-           if [ -z "$DESCRIPTION" ]; then
-             DESCRIPTION=$(awk 'BEGIN{fm=0} /^\+\+\+$/{fm++; next} fm==2 && /^[^#]/ && NF {print; exit}' "$FILE")
-           fi
-
-           TAGS=$(awk 'BEGIN{fm=0; tags=""} /^\+\+\+$/{fm++; next} fm==1 && /^tags = \[/ {
-             line=$0
-             gsub(/tags = \[|\]|"/, "", line)
-             gsub(/,/, "", line)
-             gsub(/ +/, " ", line)
-             split(line, arr, " ")
-             for (i in arr) {
-               if (arr[i] != "") tags = tags "#" arr[i] " "
-             }
-             print tags
-             exit
-           }' "$FILE")
-
-           SLUG=$(basename "$FILE" .md)
-           URL="https://theantichris.com/posts/${SLUG}/"
-
-           TOOT="📝 New blog post: ${TITLE}\n\n${DESCRIPTION}\n\n${URL}"
-           if [ -n "$TAGS" ]; then
-             TOOT="${TOOT}\n\n${TAGS}"
-           fi
-
-           TOOT=$(echo -e "$TOOT" | head -c 480)
-
-           echo "TOOT<<EOF" >> $GITHUB_OUTPUT
-           echo "$TOOT" >> $GITHUB_OUTPUT
-           echo "EOF" >> $GITHUB_OUTPUT
-
-      - name: Post to Mastodon
-        if: steps.detect.outputs.NEW_POST == 'true'
-        run: |
-           curl -X POST "${{ secrets.MASTODON_INSTANCE }}/api/v1/statuses" \
-             -H "Authorization: Bearer ${{ secrets.MASTODON_ACCESS_TOKEN }}" \
-             -F "status=${{ steps.metadata.outputs.TOOT }}" \
-             -F "visibility=public"
-
+      - name: announce newly published posts
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+        run: python3 scripts/mastodon_posts.py --send

@@ -307,7 +307,7 @@ blockquote::before {
 }
 
 /* Scope prose tables so syntax highlighting tables keep their layout. */
-:where(.post-content, .index-content) > table {
+:where(.post-content, .index-content) table:not(.lntable) {
   display: block;
   max-width: 100%;
   overflow-x: auto;
@@ -315,13 +315,13 @@ blockquote::before {
   margin-block: 1.5rem;
 }
 
-:where(.post-content, .index-content) > table :is(th, td) {
+:where(.post-content, .index-content) table:not(.lntable) :is(th, td) {
   border: 1px solid var(--border);
   padding: 0.75rem;
   text-align: left;
 }
 
-:where(.post-content, .index-content) > table th {
+:where(.post-content, .index-content) table:not(.lntable) th {
   background: var(--panel);
   color: var(--foreground);
   text-transform: none;
