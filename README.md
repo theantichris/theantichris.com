@@ -69,6 +69,20 @@ request is needed. The layout uses a centered reading column, visible navigation
 on mobile, underlined links, keyboard focus indicators, a skip link, and reduced
 motion support.
 
+### CLI conventions
+
+Use `~` for home and `~/posts`, `~/projects`, and `~/resume` for sections.
+Command lines share a shortcode that keeps the path, prompt, and command in
+monospace:
+
+```hugo
+{{< command path="~" >}}cat contact.md{{< /command >}}
+```
+
+The shortcode body is literal command text and may include author-provided HTML
+links. Article pages show their path and retain the active posts navigation.
+Read links display `[less post.md]` with the article title in the accessible name.
+
 ## License
 
 Content © Christopher Lamm. Theme by [panr](https://github.com/panr).

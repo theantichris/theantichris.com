@@ -1,0 +1,2 @@
+{{ $label := .Site.Params.readMore | default "less post.md" }}
+<a class="read-more button inline command-link" href="{{ .RelPermalink }}" aria-label="{{ $label }} — Read {{ .Title | plainify }}">[{{ $label }}]</a>

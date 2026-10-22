@@ -55,8 +55,8 @@ h5,
 h6,
 .logo,
 .navigation-menu,
-.terminal-prompt,
-.prompt-symbol,
+.terminal-command,
+.terminal-path,
 .repo-name {
   font-family: var(--font-mono);
 }
@@ -162,7 +162,7 @@ a:hover {
   min-height: 44px;
 }
 
-.navigation-menu a[aria-current="page"] {
+.navigation-menu a[aria-current] {
   color: var(--yellow);
   text-decoration-thickness: 0.15em;
 }
@@ -171,9 +171,9 @@ a:hover {
   margin-block: 1rem 2rem;
 }
 
-.terminal-prompt,
-.prompt-symbol {
-  display: inline;
+.terminal-command {
+  margin-block: 1.5rem 0.75rem;
+  overflow-wrap: anywhere;
   font-weight: 500;
 }
 
@@ -183,10 +183,32 @@ a:hover {
 
 .prompt-symbol {
   color: var(--accent);
+  margin-inline: 0.25em;
 }
 
-.prompt-symbol::before {
-  content: " ";
+.terminal-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15em;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.terminal-path [aria-current="page"] {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+a.button.command-link {
+  font-family: var(--font-mono);
+  min-height: 44px;
+  text-decoration: underline;
+}
+
+a.button.command-link:hover {
+  color: var(--yellow);
+  background: var(--panel);
 }
 
 .profile-image {
@@ -341,10 +363,6 @@ blockquote::before {
 
 .card-body {
   flex: 1;
-}
-
-.repo-icon {
-  color: var(--magenta);
 }
 
 .repo-name {

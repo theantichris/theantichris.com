@@ -13,8 +13,7 @@ keywords = [
 ]
 +++
 
-<div class="terminal-prompt">/theantichris.com/~/projects</div>
-<div class="prompt-symbol">>>> </div>ls
+{{< command path="~/projects" >}}ls{{< /command >}}
 
 <div class="github-cards-grid">
   {{< github-card user="theantichris" repo="dotfiles" >}}
@@ -26,5 +25,4 @@ keywords = [
   {{< github-card user="theantichris" repo="tavily-go" >}}
 </div>
 
-<div class="terminal-prompt">/theantichris.com/~/projects</div>
-<div class="prompt-symbol">>>> </div>echo "More projects at <a title="Christopher Lamm's Github projects" href="https://github.com/theantichris?tab=repositories">github.com/theantichris</a>"
+{{< command path="~/projects" >}}echo "More projects at <a title="Christopher Lamm's Github projects" href="https://github.com/theantichris?tab=repositories">github.com/theantichris</a>"{{< /command >}}
