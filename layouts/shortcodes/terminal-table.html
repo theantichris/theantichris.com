@@ -1,0 +1,3 @@
+<div class="terminal-table" role="region" aria-label="{{ .Get "label" | default "Table" }}" tabindex="0">
+  {{ .Page.RenderString (dict "display" "block") .Inner }}
+</div>

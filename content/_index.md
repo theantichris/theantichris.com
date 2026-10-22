@@ -26,11 +26,13 @@ Christopher Lamm — Engineering leader with 30+ years of software development e
 
 {{< command path="~" >}}cat focus_areas.md{{< /command >}}
 
+{{< terminal-table label="Engineering focus areas" >}}
 | Domain                            | Role                                 | Impact                                                   |
 |-----------------------------------|--------------------------------------|------------------------------------------------------------|
 | Engineering Leadership            | Organizational design, hiring, coaching | Teams with clear ownership and paths into leadership    |
 | AI & ML Product Delivery          | Technical strategy, execution, launch | AI features delivered to customers                      |
 | Platform Modernization            | Architecture, infrastructure, data   | More reliable systems and better developer experience   |
+{{< /terminal-table >}}
 
 {{< command path="~" >}}cat highlights.md{{< /command >}}
 
