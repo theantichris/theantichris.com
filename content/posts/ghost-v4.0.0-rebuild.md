@@ -87,7 +87,7 @@ The current CLI creates a fresh session for each invocation, but the conversatio
 
 ## Streaming and Cancellation
 
-Ghost writes response content to standard output as it arrives. Errors go to standard error. Pressing `Ctrl+C` cancels the request, leaves any partial output visible.
+Ghost writes response content to standard output as it arrives. Errors go to standard error. Pressing `Ctrl+C` cancels the request and leaves any partial output visible.
 
 ```go
 ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
